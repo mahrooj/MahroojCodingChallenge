@@ -9,5 +9,7 @@ public class Course {
 	Date endTime;
 	String name;
 	ArrayList<Course>prerequisites;
+	
+	
 
 }
