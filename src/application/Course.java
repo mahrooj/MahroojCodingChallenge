@@ -1,30 +1,25 @@
 package application;
-import java.util.ArrayList;
-import java.util.Date;
-
 
 public class Course {
-	
-	Date startTime;
-	Date endTime;
+
 	String name;
-	ArrayList<Course>prerequisites;
 	
-	public String toString() 
+	
+	//create constructor
+	public Course() {}
+	
+	public Course(String n)
 	{
-		String w= name +" is from " + startTime +" to " + endTime+ " , and requires";
-		String s = null;
-		for (Course c : prerequisites)
-		{s+= c;}
-		return w+s;
+		name = n;
 	}
 	
 	
-	//check if courses are overlapping
-		public boolean isCourseOverlapping(Course course1,Course course2)
-		{
-			return false;
-			
-		}
+	public String toString() 
+	{
+		return name;
+	}
+	
+	
+	
 
 }
