@@ -10,23 +10,23 @@ public class Student
 	Concentration concentration;
 	ArrayList<Course>selectedCourses;
 	
-	public boolean isCourseOverlapping(Course course1,Course course2)
-	{
-		return false;
-		
-	}
 	
+	
+	//adds courses student has already completed
     public void addCompletedCourse(Course addCourse)
     {
     	completedCourses.add(addCourse);
     }
     
-    //check timings before adding !!incomplete!!
-    public void addSelectedCourse(Course addCourse)
+    //adds new course after checking if any overlaps
+    public void addtoSelectedCourse(Course addCourse, ArrayList<Course> selectedCourses)
     {
     	for (Course chosencourse : selectedCourses)
     	{
     		//if (!addCourse.startTime.after(chosencourse.endTime))&&(!chosencourse.startTime.after(addCourse.endTime))))
+    		{
+    			
+    		}
     	}
     	selectedCourses.add(addCourse);
     }
