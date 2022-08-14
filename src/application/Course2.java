@@ -14,7 +14,6 @@ public class Course2 extends Course {
 	
 	public Course2(Date sTime, Date eTime, String n, ArrayList<Course>prereq)
 	{
-		
 		startTime = sTime;
 		endTime = eTime;
 		setName(n);
