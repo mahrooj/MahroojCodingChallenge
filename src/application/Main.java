@@ -19,8 +19,10 @@ public class Main extends Application {
 			ButtonController controller= (ButtonController) loader.getController();
 			controller.sceneConditions=primaryStage;
 			Scene scene = new Scene(root,400,400);
+
 	        primaryStage.setScene(scene);
 			primaryStage.setTitle("CS schedule builder");
+
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
