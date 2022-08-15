@@ -6,6 +6,9 @@ public class Course2objects {
 		// TODO Auto-generated method stub
 		Course2 MATH267= new Course2();
 
+		//MATH267.addprereq(MATH265);
+
+
 	}
 
 }

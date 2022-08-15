@@ -17,9 +17,9 @@ public class Main extends Application {
 			FXMLLoader loader = new FXMLLoader();
 			VBox root = loader.load(new FileInputStream("src/application/ScheduleBuilderView.fxml"));
 			ButtonController controller= (ButtonController) loader.getController();
-			controller.sceneConditions=primaryStage;
-			Scene scene = new Scene(root,400,400);
 
+			controller.applicationStage=primaryStage;
+			Scene scene = new Scene(root,400,400);
 	        primaryStage.setScene(scene);
 			primaryStage.setTitle("CS schedule builder");
 
@@ -32,4 +32,6 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
+
 }
+

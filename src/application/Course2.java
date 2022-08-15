@@ -23,6 +23,10 @@ public class Course2 extends Course {
 		}
 	}
 	
+
+	public void addprereq(Course i)
+	{prerequisites.add(i);}
+
 	public String toString() 
 	{
 		String w= getName() +" is from " + startTime +" to " + endTime+ " , and requires";

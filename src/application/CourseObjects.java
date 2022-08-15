@@ -1,5 +1,9 @@
 package application;
 
+
+import java.util.ArrayList;
+
+
 public class CourseObjects {
 
 	public static void main(String[] args) {
@@ -11,6 +15,9 @@ public class CourseObjects {
 	    Course MATH265 = new Course("MATH265");
 	    Course PHIL279 = new Course("PHIL279");
 	
+	    ArrayList<Course> CGD=new ArrayList<Course>();
+		CGD.add(MATH265);
+		System.out.println(CGD);
 
 	}
 

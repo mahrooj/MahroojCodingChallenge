@@ -1,11 +1,13 @@
 package application;
 
 import java.util.ArrayList;
+
 //this needs to be stored fixed info, not input, how??
 public class Concentration {
 	private ArrayList<Course2>requiredCourses;
 	private String name;
 	
+
 	public Concentration() {}
 	
 	public Concentration(String n,ArrayList<Course2>requiredC)
@@ -16,6 +18,13 @@ public class Concentration {
 		}
 		name=n;
 	}
+
+	
+	public void addit(Course2 course)
+	{
+		requiredCourses.add( course);
+	}
+
 
 
 	public String toString() 
