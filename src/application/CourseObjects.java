@@ -1,6 +1,8 @@
 package application;
 
+
 import java.util.ArrayList;
+
 
 public class CourseObjects {
 
@@ -16,6 +18,7 @@ public class CourseObjects {
 	    ArrayList<Course> CGD=new ArrayList<Course>();
 		CGD.add(MATH265);
 		System.out.println(CGD);
+
 	}
 
 }
