@@ -1,17 +1,23 @@
 package application;
 
+
 import java.util.List;
+
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+
+import javafx.scene.control.Label;
+
 import javafx.stage.Stage;
 
 public class ButtonController {
