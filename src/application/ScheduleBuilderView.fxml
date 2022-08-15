@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="672.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ButtonController">
+   <children>
+      <Label alignment="CENTER" text="Welcome!">
+         <font>
+            <Font size="40.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="10000.0" />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets top="300.0" />
+         </VBox.margin></Label>
+      <Label alignment="CENTER" text="This is your personalized Schedule Builder" VBox.vgrow="NEVER">
+         <font>
+            <Font size="33.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></Label>
+      <Button alignment="BOTTOM_RIGHT" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#OpenSlide2" prefHeight="45.0" prefWidth="135.0" text="Get Started" VBox.vgrow="NEVER">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" left="450.0" top="300.0" />
+         </VBox.margin></Button>
+   </children>
+</VBox>
