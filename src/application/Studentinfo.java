@@ -57,7 +57,7 @@ public class Studentinfo
     
     public String toString()
     {
-		return " concentration in " + concentration ;
+		return " concentration in " + concentration +"and has completed " + completedCourses.toString();
     	
     }
    

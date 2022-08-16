@@ -27,17 +27,18 @@ public class Concentration {
 	
 	public void addrequiredCourses(Course2 course)
 	{
-		requiredCourses.add( course);
+		
+		 requiredCourses.add( course);
 	}
 
 
 
 	public String toString() 
 	{
-		 String s = null;
+		 String s = "";
 	     String w=  name + " has the following required courses: " ;
 	     for (Course c : requiredCourses)
-	      { s += " "+ c;};
+	      { s += " "+ c;}
 	     return w + s; 
 	}      
 		

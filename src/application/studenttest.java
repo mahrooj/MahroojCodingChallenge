@@ -23,7 +23,7 @@ public class studenttest {
 		Course2 SOCI200= new Course2("SOCI200");
 		
 		
-		Concentration HumanComputerInteractions= new Concentration("HumanComputerInteractions");
+		Concentration HumanComputerInteractions= new Concentration("Human Computer Interactions");
 		HumanComputerInteractions.addrequiredCourses(CPSC453);
 		HumanComputerInteractions.addrequiredCourses(CPSC481);
 		HumanComputerInteractions.addrequiredCourses(COMS201);
