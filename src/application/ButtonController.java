@@ -155,7 +155,7 @@ public class ButtonController {
 	}
 	 
 	 private void RecommendedCourses(Scene rc) {
-		 
+		 Label label= new Label("You need to take the following courses:");
 		 VBox recs = new VBox();
 		 Scene reccourses= new Scene(recs);
 			applicationStage.setScene(reccourses);
