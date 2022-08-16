@@ -12,6 +12,8 @@ public class studenttest {
 		Course MATH213= new Course("MATH213");
 		Course MATH277= new Course("MATH277");
 		
+		CPSC331.getName();
+		
 		Course2 CPSC481= new Course2("CPSC481");
 		CPSC481.addprereq(SENG300);
 		Course2 CPSC453= new Course2("CPSC453");

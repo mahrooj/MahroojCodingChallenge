@@ -24,7 +24,17 @@ import javafx.stage.Stage;
 public class ButtonController {
 	
 	Stage applicationStage;
-
+//ADD ALL OBJECTS CREATED HERE
+	
+	Course SENG300= new Course("SENG300");
+	Course CPSC351= new Course("CPSC351");
+	Course CPSC331= new Course("CPSC331");
+	Course CPSC355= new Course("CPSC355");
+	Course MATH213= new Course("MATH213");
+	Course MATH277= new Course("MATH277");
+	
+	Studentinfo student = new Studentinfo();
+	
     @FXML
     void OpenSlide2(ActionEvent event) {
     	Scene sceneChoose = applicationStage.getScene();
@@ -46,14 +56,10 @@ public class ButtonController {
     	 Scene scene = new Scene(checkboxes);
     	 applicationStage.setScene(scene);
     	
-   
+ 
  
     }
-//create objects
-    Course2 CPSC481= new Course2();
-    ArrayList <Course2> hciRequiredCourses= new ArrayList<Course2>();
-    Concentration HumanComputerInteractions= new Concentration("Human Computer Interactions", hciRequiredCourses);
-   //hciRequiredCourses.add(CPSC481);
+
 	void GotoConditions(Scene sceneChoose) {
 		Scene rc = applicationStage.getScene();
 		
@@ -100,7 +106,7 @@ public class ButtonController {
 		
 	}
 	
-	 void SelectCompletedCourse(Scene completed) {
+	public void SelectCompletedCourse(Scene completed) {
 		 Scene sceneChoose = applicationStage.getScene();
 		 Label label = new Label("Select the courses you have previously completed with a passing grade:");
 		 VBox completedcourses= new VBox();
@@ -110,6 +116,12 @@ public class ButtonController {
     	 CheckBox c4 = new CheckBox("CPSC355");
     	 CheckBox c5 = new CheckBox("MATH277");
     	 CheckBox c6 = new CheckBox("MATH213");
+    	if (c1.isSelected()) {student.addStudentsCompletedCourse(CPSC331);}
+    	 if (c2.isSelected()) {student.addStudentsCompletedCourse(CPSC351);}
+    	 if (c4.isSelected()) {student.addStudentsCompletedCourse(SENG300);}
+    	 if (c4.isSelected()) {student.addStudentsCompletedCourse(CPSC355);}
+    	 if (c5.isSelected()) {student.addStudentsCompletedCourse(MATH277);}
+    	 if (c6.isSelected()) {student.addStudentsCompletedCourse(MATH213);}
     	 Button nextButton = new Button("Next");
     	 nextButton.setOnAction(doneEvent -> {GotoConditions(sceneChoose);});
     	 

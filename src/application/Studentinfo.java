@@ -2,14 +2,22 @@ package application;
 
 import java.util.ArrayList;
 
-public class Student
+public class Studentinfo
 {
 	
 	 private ArrayList<Course>completedCourses;
 	 private Concentration concentration;
 	private ArrayList<Course>selectedCourses;
 	
-	public Student(Concentration conc)
+	public Studentinfo() {
+		completedCourses = new ArrayList<Course>();
+		selectedCourses = new ArrayList<Course>();
+	}
+	public void setConcentration(Concentration ccourse) {
+		concentration = ccourse;
+	}
+	
+	public Studentinfo(Concentration conc)
 	{
 		concentration = conc;
 		completedCourses = new ArrayList<Course>();
