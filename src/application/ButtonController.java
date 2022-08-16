@@ -1,6 +1,7 @@
 package application;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -48,7 +49,11 @@ public class ButtonController {
    
  
     }
-
+//create objects
+    Course2 CPSC481= new Course2();
+    ArrayList <Course2> hciRequiredCourses= new ArrayList<Course2>();
+    Concentration HumanComputerInteractions= new Concentration("Human Computer Interactions", hciRequiredCourses);
+   //hciRequiredCourses.add(CPSC481);
 	void GotoConditions(Scene sceneChoose) {
 		Scene rc = applicationStage.getScene();
 		
@@ -56,21 +61,23 @@ public class ButtonController {
 		Label checkboxLabel = new Label("Choose your desired computer science concentration ");
 		HBox c1 = new HBox();
 		Button nextButton = new Button("Next");
-		nextButton.setOnAction(doneEvent ->{RecommendedCourses(rc);});
+		
 		final ComboBox concentrationComboBox = new ComboBox();
-        concentrationComboBox.getItems().addAll(
+		//concentrationComboBox.getItems().add(HumanComputerInteractions.getname());
+        /*concentrationComboBox.getItems().addAll(
         		"Human Computer Interactions",
             "Computer Graphics",
             "Theoretical Computer Science",
             "Scientific Computation",
             "Information Security"
              
-        );
-		
-		
+        );*/
+        Object value= concentrationComboBox.getValue() ;
+        
+		//Student student = new Student();
 		c1.getChildren().addAll(concentrationComboBox);
 		vcondition.getChildren().addAll(checkboxLabel,c1,nextButton);
-		
+		nextButton.setOnAction(doneEvent ->{RecommendedCourses(rc); ;});
 		
 		
 		Scene conditions = new Scene (vcondition);

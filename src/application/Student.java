@@ -19,8 +19,17 @@ public class Student
 	public Concentration getconcentration() {
 		return concentration;
 	}
+	
+	public ArrayList<Course> getStudentscompletedCourses(){
+		return completedCourses;
+	}
+	public ArrayList<Course> getselectedCourses(){
+		return selectedCourses;
+	}
+	
+
 	//adds courses student has already completed
-    public void addCompletedCourse(Course addCourse)
+    public void addStudentsCompletedCourse(Course addCourse)
     {
     	completedCourses.add(addCourse);
     }

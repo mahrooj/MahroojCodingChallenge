@@ -9,8 +9,15 @@ public class Course2 extends Course {
 	private Date startTime;
 	private Date endTime;
 	
+	//Course2 CPSC481= new Course2();
+	public Course2(){
+		prerequisites = new ArrayList<Course>();
+	}
 	
-	public Course2(){}
+	public Course2(String n) {
+		setName(n);
+		prerequisites = new ArrayList<Course>();
+	}
 	
 	public Course2(Date sTime, Date eTime, String n, ArrayList<Course>prereq)
 	{
@@ -29,10 +36,10 @@ public class Course2 extends Course {
 
 	public String toString() 
 	{
-		String w= getName() +" is from " + startTime +" to " + endTime+ " , and requires";
-		String s = null;
+		String w=","+ getName() +/*" is from " + startTime +" to " + endTime+*/ " which requires ";
+		String s = "";
 		for (Course c : prerequisites)
-		 {s+= c;}
+		 {s+= c+" ";}
 		return w+s;
 	}
 	
