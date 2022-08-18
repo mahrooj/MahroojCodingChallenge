@@ -10,6 +10,11 @@ public class Concentration {
 
 	public Concentration() {}
 	
+	public Concentration(String n) {
+		name=n;
+		requiredCourses = new ArrayList<Course2>();
+	}
+	 
 	public Concentration(String n,ArrayList<Course2>requiredC)
 	{
 		for (Course2 i: requiredC)
@@ -20,23 +25,24 @@ public class Concentration {
 	}
 
 	
-	public void addit(Course2 course)
+	public void addrequiredCourses(Course2 course)
 	{
-		requiredCourses.add( course);
+		
+		 requiredCourses.add( course);
 	}
 
 
 
 	public String toString() 
 	{
-		 String s = null;
-	     String w=  name + " has the following required courses: " ;
+		 String s = "";
+	    // String w=  name + " has the following required courses: " ;
 	     for (Course c : requiredCourses)
-	      { s += " "+ c;};
-	     return w + s; 
+	      { s += " "+ c;}
+	     return  s; 
 	}      
 		
-	public void setConcName(String n)
+	protected void setConcName(String n)
 	{
 		name=n;
 	}
@@ -59,7 +65,7 @@ public class Concentration {
 		}
 	}
 	      
-	
+	 
 	
 	
 	
