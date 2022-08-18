@@ -14,7 +14,7 @@ public class Studentinfo
 		selectedCourses = new ArrayList<Course>();
 	}
 	public void setConcentration(Concentration ccourse) {
-		concentration = ccourse;
+		this.concentration = ccourse;
 	}
 	
 	public Studentinfo(Concentration conc)
@@ -57,7 +57,7 @@ public class Studentinfo
     
     public String toString()
     {
-		return " concentration in " + concentration +"and has completed " + completedCourses.toString();
+		return " concentration in " + concentration.getConcName() +"and has completed " + completedCourses;
     	
     }
    

@@ -93,11 +93,11 @@ public class ButtonController {
 		final ComboBox<String> concentrationComboBox = new ComboBox<String>();
 		
         concentrationComboBox.getItems().addAll(
-        	"Human Computer Interactions",
-            "Computer Graphics",
-            "Theoretical Computer Science",
-            "Scientific Computation",
-            "Information Security"
+        	HumanComputerInteractions.getConcName(),
+            ComputerGraphics.getConcName(),
+            TheoreticalCS.getConcName(),
+            ScientificComputation.getConcName(),
+            InformationSecurity.getConcName()
              
         );
         
@@ -105,7 +105,7 @@ public class ButtonController {
 		
 		c1.getChildren().addAll(concentrationComboBox);
 		vcondition.getChildren().addAll(checkboxLabel,c1,nextButton);
-		nextButton.setOnAction(doneEvent ->{RecommendedCourses(rc); AddConcentration( concentrationComboBox.getValue());});
+		nextButton.setOnAction(doneEvent ->{ System.out.println(concentrationComboBox.getValue());AddConcentration( concentrationComboBox.getValue());RecommendedCourses(rc);});
 		
 		
 		Scene conditions = new Scene (vcondition);
@@ -154,11 +154,14 @@ public class ButtonController {
 		
 	}
 	 
-	 private void RecommendedCourses(Scene rc) {
+	private void RecommendedCourses(Scene rc) {
 		 Label label= new Label("You need to take the following courses:");
-		 VBox recs = new VBox();
+		//String coursestotake=student.
+	     //Label list= new Label();
+	 VBox recs = new VBox();
+		recs.getChildren().addAll(label);
 		 Scene reccourses= new Scene(recs);
-			applicationStage.setScene(reccourses);
+		applicationStage.setScene(reccourses);
 		}
 	 void AddConcentration(String selected) {
 			//create all concentrations 
@@ -170,7 +173,7 @@ public class ButtonController {
 			HumanComputerInteractions.addrequiredCourses(COMS201);
 			HumanComputerInteractions.addrequiredCourses(PSYC200);
 			HumanComputerInteractions.addrequiredCourses(SOCI200);
-			System.out.println(HumanComputerInteractions);
+			
 			
 			
 			ComputerGraphics.addrequiredCourses(CPSC453);
@@ -205,9 +208,12 @@ public class ButtonController {
 			CPSC441.addprereq(CPSC331);CPSC441.addprereq(CPSC355);
             InformationSecurity.addrequiredCourses(CPSC441);
 			InformationSecurity.addrequiredCourses(CPSC418);
+			System.out.println(selected);
 		Concentration[] concentrations= {HumanComputerInteractions,ComputerGraphics,TheoreticalCS,ScientificComputation,InformationSecurity};
 			for (int i=0;i<5;i++) {
-				if (selected.equals(concentrations[i].getConcName())) {
+				if (selected.equals((concentrations[i].getConcName()))) {
+					System.out.println(selected);
+					System.out.println(concentrations[i].getConcName());
 					student.setConcentration(concentrations[i]);
 				}
 			} 

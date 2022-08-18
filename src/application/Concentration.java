@@ -36,10 +36,10 @@ public class Concentration {
 	public String toString() 
 	{
 		 String s = "";
-	     String w=  name + " has the following required courses: " ;
+	    // String w=  name + " has the following required courses: " ;
 	     for (Course c : requiredCourses)
 	      { s += " "+ c;}
-	     return w + s; 
+	     return  s; 
 	}      
 		
 	protected void setConcName(String n)
